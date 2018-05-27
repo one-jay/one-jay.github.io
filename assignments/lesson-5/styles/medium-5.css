@@ -1,0 +1,27 @@
+@media only screen and (min-width: 600px) {
+
+    /* Only CSS write declarations that need to be changed. Do not duplicated declarations that are already established in the main.css */
+
+    nav button { display:none; }  /* hamburger button does not need to be shown in the medium on up views */
+
+    nav ul li {display: inline;}
+
+    section.forecast{ display: block;  }
+
+    table{}
+
+    thead{}
+
+      th{padding: 1em;
+        background-color: gray;}
+
+    tbody{}
+
+      td{
+background-color: whitesmoke;     }
+
+    body{
+      max-width: 1024px;
+    }
+
+  }
