@@ -6,7 +6,7 @@
 
 body {
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: 'Sunflower', Ubuntu, serif;
 
 }
 
@@ -24,12 +24,12 @@ header .subheading {}
     position: absolute;
     top: 0;
     right: 0;
-    margin: 10;
+    margin: 0;
     max-width:150px;
   }
 
 nav {
-  
+
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9e4f7+0,0fb4e7+100;Ble+3D+%235 */
   background: #a9e4f7; /* Old browsers */
   background: -moz-linear-gradient(top, #a9e4f7 0%, #0fb4e7 100%); /* FF3.6-15 */
