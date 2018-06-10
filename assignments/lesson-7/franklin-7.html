@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Franklin Weather Forecast | Quad-Cities Weather Station</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="cit230 week5 assignment">
+
+  <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles/normalize.css" />
+  <link rel="stylesheet" href="styles/large-7.css" />
+  <link rel="stylesheet" href="styles/main-7.css" />
+  <link rel="stylesheet" href="styles/medium-7.css" />
+
+
+</head>
+<body>
+  <header>
+    <h1>Franklin</h1>
+    <img src="../../images/quadCities.jpg"
+      id="logo" alt="logo" class="clearfix">
+  </header>
+
+  <nav class="clearfix">
+    <button onclick="toggleMenu()">&#9776;</button>
+    <ul id="primaryNav" class="hide">
+    	<li><a href="#">Home</a></li>
+    	<li><a href="#">Franklin</a></li>
+    	<li><a href="#">Greenville</a></li>
+    	<li><a href="#">Springfield</a></li>
+    	<li><a href="#">Storm Center</a></li>
+    	<li><a href="#">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <figure class="franklin">
+      <img srcset="images/franklin-550w.jpg 550w,
+      images/franklin-900w.jpg 900w,
+      images/franklin-1600w.jpg 1600w"
+      src="images/franklin-1600w.jpg"
+      sizes="100vw"
+        alt="franklin-1600w"/>
+        <figcaption>
+          image provided for L06 assignment
+        </figcaption>
+    </figure>
+
+    <section class="weather-summary">
+      <h3>Weather Summary</h3>
+      <div class="highlow">
+        <p>High: <input type="number" id="high" size="1" value="55">&deg;</p>
+        <p>Low: <input type="number" id="low" size="1" value="45">&deg;</p>
+      </div>
+      <div class="current">
+        Sunny
+        <picture>
+            <img src="images/#" alt="">
+        </picture>
+      </div>
+      <div class="conditions">
+        <p>Precipitation: 20% chance</p>
+        <p>Wind Speed: ~<input id="wind" size="3" value="10"> mph SSW</p>
+        <p>Wind Chill: <span id="windChillOut"></span></p>
+      </div>
+    </section>
+
+
+    <section class="forecast">
+      <h3>Ten Day Forecast</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+            <th>Day 4</th>
+            <th>Day 5</th>
+            <th>Day 6</th>
+            <th>Day 7</th>
+            <th>Day 8</th>
+            <th>Day 9</th>
+            <th>Day 10</th>
+          </tr>
+      	</thead>
+        <tbody>
+          <tr>
+            <td>89&deg;F</td>
+            <td>87&deg;F</td>
+            <td>78&deg;F</td>
+            <td>75&deg;F</td>
+            <td>72&deg;F</td>
+            <td>72&deg;F</td>
+            <td>79&deg;F</td>
+            <td>83&deg;F</td>
+            <td>85&deg;F</td>
+            <td>89&deg;F</td>
+          </tr>
+      	</tbody>
+      </table>
+    </section>
+
+    <article>
+      <h3>Franklin Breaks Record</h3>
+      <img src="../../images/rexburg.jpg"
+       alt="#">
+      <p class="town-article">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+  </main>
+
+  <footer>
+    <section class="contact">
+      Contact information placeholder
+      999.999.9999
+      123 Main St. Anytown, US 99999
+      Google Map
+    </section>
+    <section class="footer-bar">
+      &copy; 2018 | All Rights Reserved | Quad-Cities Weather Station | <span id="currentdate"></span>
+    </section>
+  </footer>
+
+<script src="scripts/windchill.js"></script>
+  <script src="scripts/current-date.js"></script>
+    <script src="scripts/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+/*
+* { box-sizing: border-box;}   This wildcard applies to all elements ensuring a box layout model */
+
+
+body {
+  font-size: 16px;
+  font-family: 'Sunflower', Ubuntu, serif;
+
+
+}
+
+header, nav, main, footer { /* the comma between the selectors means apply the following CSS declarations to all of the listed elements */
+  max-width: 600px; /* Declare the maximum width and other main element rules to limit the stretch on larger/wider views */
+
+}
+
+header {
+  display: flex;
+    flex-flow: row;
+}
+header h1 {text-align: center; }
+header img {}
+header .subheading {}
+
+#logo{
+    width: 60%;
+    max-width:150px
+  }
+
+nav {
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9e4f7+0,0fb4e7+100;Ble+3D+%235 */
+  background: #a9e4f7; /* Old browsers */
+  background: -moz-linear-gradient(top, #a9e4f7 0%, #0fb4e7 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #a9e4f7 0%,#0fb4e7 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #a9e4f7 0%,#0fb4e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */}
+
+
+
+nav button {
+  font-size: 1.5em;
+  background-color: transparent;
+  border: none;
+  margin: .2em 2%;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul.hide{
+  display: none;
+}
+nav ul li {}
+nav ul li a {
+  display: block;
+  padding: 1em 2%;
+  text-decoration: none;
+  color: black;
+  border-top: 1px solid rgba(0,0,0,.5);
+}
+nav ul li.active a {}
+nav ul li a:hover {
+  color: red;
+  background-color: white;
+}
+
+main {}
+  main.gallery{
+    display: grid;
+    grid-column: 1;
+  }
+main h2 {}
+main figure {}
+main figure img { max-width: 100%;}
+input{
+  background-color: transparent;
+  border: none;
+}
+article img {width: 100%; }
+
+.weather-summary{
+  background: #a9e4f7; /* Old browsers */
+  background: -moz-linear-gradient(top, #a9e4f7 0%, #0fb4e7 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #a9e4f7 0%,#0fb4e7 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #a9e4f7 0%,#0fb4e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */
+  padding: 1em;
+}
+
+.forecast{ display: none; }
+
+footer {
+  background-color: navy;
+  color: snow;
+  padding: 1em;
+}
+
+.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
