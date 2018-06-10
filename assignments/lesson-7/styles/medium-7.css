@@ -47,4 +47,8 @@
       max-width: 1024px;
     }
 
+    
+
+    img:hover {box-shadow: 5px 5px 10px gray;}
+
   }

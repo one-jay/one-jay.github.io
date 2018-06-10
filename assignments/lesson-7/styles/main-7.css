@@ -80,6 +80,7 @@ main {}
 main h2 {}
 main figure {}
 main figure img { max-width: 100%;}
+figcaption{ display: none;}
 input{
   background-color: transparent;
   border: none;
@@ -88,6 +89,8 @@ article{
     margin: 2%;
 }
 article img {width: 100%; }
+
+
 
 .weather-summary{
   background: #a9e4f7; /* Old browsers */

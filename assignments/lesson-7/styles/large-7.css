@@ -12,5 +12,7 @@ main.gallery{
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+img:hover {box-shadow: 5px 5px 10px gray;}
+figcaption{ display: block;}
 
   }
