@@ -79,6 +79,9 @@ input{
   background-color: transparent;
   border: none;
 }
+article{
+    margin: 2%;
+}
 article img {width: 100%; }
 
 .weather-summary{

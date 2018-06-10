@@ -1,11 +1,16 @@
 @media only screen and (min-width: 1024px ) {
 
+body{background-color: grey;
+margin: auto auto;}
+
   header, nav, main, footer { /* the comma between the selectors means apply the following CSS declarations to all of the listed elements */
     max-width: 1600px; /* Declare the maximum width and other main element rules to limit the stretch on larger/wider views */
 
   }
 main.gallery{
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 
   }
