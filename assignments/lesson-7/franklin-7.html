@@ -17,8 +17,8 @@
 <body>
   <header>
     <h1>Franklin</h1>
-    <img src="../../images/quadCities.jpg"
-      id="logo" alt="logo" class="clearfix">
+    <!--<img src="../../images/quadCities.jpg"
+      id="logo" alt="logo" >-->
   </header>
 
   <nav class="clearfix">
@@ -50,8 +50,10 @@
     <section class="weather-summary">
       <h3>Weather Summary</h3>
       <div class="highlow">
-        <p>High: <input type="number" id="high" size="1" value="55">&deg;</p>
-        <p>Low: <input type="number" id="low" size="1" value="45">&deg;</p>
+        <p>High: <input id="high" type="number" size="2" value="55" readonly>
+          &deg;</p>
+        <p>Low: <input id="low" type="number" size="2" value="45" readonly>
+          &deg;</p>
       </div>
       <div class="current">
         Sunny
