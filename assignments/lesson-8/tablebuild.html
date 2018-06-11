@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="cit230 week2 assignment">
+
+  <style>
+    body{
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    table{
+      font-family: Ubuntu, sans-serif;
+    }
+    table tr:nth-child(even) {
+      background-color: #e7ffed;
+    }
+    table tr:nth-child(odd) {
+      background-color: #e7f0ed;
+    }
+    thead{
+      font-weight: bold;
+    }
+    .highlight{
+      background-color:#628ca6;
+      color: white;
+    }
+    th{
+      background-color:#628ca6;
+
+      padding: .5em;
+    }
+    td{
+      border: 1px solid gray;
+      text-align: center;
+      padding: .5em;
+
+    }
+    tfoot{
+      font-size: small;
+    }
+    footer{align-items: flex-end;}
+  </style>
+
+  <title>CIT 230 Assignment Portal | Clayton T. Student | BYU-Idaho</title>
+</head>
+<body>
+
+  <header>
+  </header>
+  <nav>
+  </nav>
+
+  <main>
+    <table>
+      <thead class="highlight">
+        <tr>
+          <th colspan="3"
+          style="color: black; background-color:#7fb9c2; font-size:1.5em">
+          ACME Wildwest</th>
+        </tr>
+        <tr>
+          <th>
+            Period
+          </th>
+          <th>
+            Sales
+          </th>
+          <th>
+            Sales Goal
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>August</td>
+          <td>$3,590</td>
+          <td>$4,000</td>
+        </tr>
+        <tr>
+          <td>September</td>
+          <td>$4,220</td>
+          <td>$5000</td>
+        </tr>
+        <tr>
+          <td>October</td>
+          <td>$4,870</td>
+          <td>$5,000</td>
+        </tr>
+        <tr>
+          <td>November</td>
+          <td>$8,610</td>
+          <td class="highlight">$7,500</td>
+        </tr>
+        <tr>
+          <td><em>Black Friday</em></td>
+          <td colspan="2">$3,200</td>
+        </tr>
+        <tr>
+          <td>December</td>
+          <td>$6,820</td>
+          <td>$7,500</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="3">
+              Compiled 12.20.2020
+          </th>
+
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+
+  <footer>
+    <p>Copyright 2018 | Clayton Thomas | Queen Creek, Arizona | <a href="https://byui.edu">BYU-Idaho Online</a></p>
+  </footer>
+</body>
+</html>
