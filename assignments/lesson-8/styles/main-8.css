@@ -6,7 +6,7 @@
 body {
   font-size: 16px;
   font-family: 'Sunflower', Ubuntu, serif;
-
+margin: 2%;
 
 }
 
@@ -39,7 +39,8 @@ nav {
   background: -moz-linear-gradient(top, #a9e4f7 0%, #0fb4e7 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #a9e4f7 0%,#0fb4e7 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #a9e4f7 0%,#0fb4e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */}
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */
+}
 
 
 
@@ -81,10 +82,47 @@ main h2 {}
 main figure {}
 main figure img { max-width: 100%;}
 figcaption{ display: none;}
-input{
-  background-color: transparent;
-  border: none;
+
+
+form{
+    display: flex;
+    flex-flow: column;
+    max-width: 600px;
 }
+label{
+    margin-top: 1em;
+}
+input{
+  background-color: lightgray;
+  border: none;
+    margin-bottom: 1em;
+    height: 3em;
+}
+div#range{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.radio{
+    display: inline;
+
+}
+div.radio input{
+    margin-left: 30px;
+}
+textarea{
+    margin-bottom: 3em;
+}
+#button{
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9e4f7+0,0fb4e7+100;Ble+3D+%235 */
+  background: #a9e4f7; /* Old browsers */
+  background: -moz-linear-gradient(top, #a9e4f7 0%, #0fb4e7 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #a9e4f7 0%,#0fb4e7 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #a9e4f7 0%,#0fb4e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */
+    margin-bottom: 3em;
+}
+
 article{
     margin: 2%;
 }
