@@ -13,11 +13,7 @@
   <link rel="stylesheet" href="styles/medium.css" />
   <link rel="stylesheet" href="styles/large.css" />
 
-  <script>
-    $(document).ready(function(){
-      $(".nav").load("navigation.html");
-    });
-</script>
+
 
 </head>
 <body>
@@ -27,8 +23,8 @@
       id="logo" alt="logo" >-->
   </header>
 
-  <nav class="nav">
-<script>$(".nav").load("navigation.html");</script>
+  <nav id="nav">
+
   </nav>
 
   <main>
@@ -123,7 +119,15 @@
     </section>
   </footer>
 
-
+<div id="divTest1"></div>
+<script>
+$("#divTest1").text("Hello, world!");
+</script>
+      <script>
+    $(document).ready(function(){
+      $("#nav").load("modules/navigation.html");
+    });
+</script>
 <script src="scripts/windchill.js"></script>
   <script src="scripts/current-date.js"></script>
     <script src="scripts/nav.js"></script>
