@@ -8,27 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sunflower:300" >
-  <link rel="stylesheet" href="../../styles/normalize.css" />
+  <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/medium.css" />
   <link rel="stylesheet" href="styles/large.css" />
-
-
 
 </head>
 <body>
   <header>
     <h1>Franklin</h1>
-    <!--<img src="../../images/quadCities.jpg"
-      id="logo" alt="logo" >-->
+    <img src="images/quadCities.jpg"
+      id="logo" alt="logo" >
   </header>
 
-  <nav id="nav">
-
-  </nav>
+  <nav id="nav"></nav>
 
   <main>
-
     <figure class="franklin">
       <img srcset="images/franklin-550w.jpg 550w,
       images/franklin-900w.jpg 900w,
@@ -44,20 +39,20 @@
     <section class="weather-summary">
       <h3>Weather Summary</h3>
       <div class="highlow">
-        <p>High: <input id="high" type="number" size="2" value="55" readonly>
+        <p>High: <span id="high"></span>
           &deg;</p>
-        <p>Low: <input id="low" type="number" size="2" value="45" readonly>
+        <p>Low: <span id="low"></span>
           &deg;</p>
       </div>
       <div class="current">
         Sunny
-        <picture>
+        <picture id="icon">
             <img src="images/#" alt="">
         </picture>
       </div>
       <div class="conditions">
         <p>Precipitation: 20% chance</p>
-        <p>Wind Speed: ~<input id="wind" size="3" value="10"> mph SSW</p>
+        <p>Wind Speed: ~<span id="wind"></span> mph <span id="direction"></span>&deg;</p>
         <p>Wind Chill: <span id="windChillOut"></span></p>
       </div>
     </section>
@@ -107,29 +102,15 @@
 
   </main>
 
-  <footer>
-    <section class="contact">
-      Contact information placeholder
-      999.999.9999
-      123 Main St. Anytown, US 99999
-      Google Map
-    </section>
-    <section class="footer-bar">
-      &copy; 2018 | All Rights Reserved | Quad-Cities Weather Station | <span id="currentdate"></span>
-    </section>
-  </footer>
+  <footer id="footer"></footer>
 
-<div id="divTest1"></div>
-<script>
-$("#divTest1").text("Hello, world!");
-</script>
-      <script>
-    $(document).ready(function(){
-      $("#nav").load("modules/navigation.html");
-    });
-</script>
-<script src="scripts/windchill.js"></script>
-  <script src="scripts/current-date.js"></script>
+    <script>$("#footer").load("modules/footer.html");</script>
+    <script>$("#nav").load("modules/navigation.html");</script>
     <script src="scripts/nav.js"></script>
+    <script src="scripts/wayfinding.js"></script>
+    <script src="scripts/weatherdata.js"></script>
+    <script src="scripts/windchill.js"></script>
+    <script src="scripts/current-date.js"></script>
+
 </body>
 </html>

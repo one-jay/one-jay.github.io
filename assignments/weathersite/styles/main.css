@@ -67,7 +67,9 @@ nav ul li a {
   color: black;
   border-top: 1px solid rgba(0,0,0,.5);
 }
-nav ul li.active a {}
+nav ul li.active a {
+  font-weight: bold;
+}
 nav ul li a:hover {
   color: red;
   background-color: white;
