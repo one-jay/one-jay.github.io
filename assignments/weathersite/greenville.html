@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Franklin Weather Forecast | Quad-Cities Weather Station</title>
+  <meta name="description" content="cit230 week5 assignment">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sunflower:300" >
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/medium.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+
+</head>
+<body>
+  <header>
+    <h1>Greenville</h1>
+    <img src="images/quadCities.jpg"
+      id="logo" alt="logo" >
+  </header>
+
+  <nav id="nav">
+    <button onclick="toggleMenu()">&#9776;</button>
+    <ul id="primaryNav" class="hide">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="franklin.html">Franklin</a></li>
+      <li class="active"><a href="greenville.html">Greenville</a></li>
+      <li><a href="springfield.html">Springfield</a></li>
+      <li><a href="stormcenter.html">Storm Center</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <figure class="franklin">
+      <img srcset="images/franklin-550w.jpg 550w,
+      images/franklin-900w.jpg 900w,
+      images/franklin-1600w.jpg 1600w"
+      src="images/franklin-1600w.jpg"
+      sizes="100vw"
+        alt="franklin-1600w"/>
+        <figcaption>
+          image provided for L06 assignment
+        </figcaption>
+    </figure>
+
+    <section class="weather-summary">
+      <h3>Weather Summary</h3>
+      <div class="highlow">
+        <p>High: <span id="high"></span>
+          &deg;</p>
+        <p>Low: <span id="low"></span>
+          &deg;</p>
+      </div>
+      <div class="current">
+        Sunny
+        <picture id="icon">
+            <img src="images/#" alt="">
+        </picture>
+      </div>
+      <div class="conditions">
+        <p>Precipitation: 20% chance</p>
+        <p>Wind Speed: ~<span id="wind"></span> mph <span id="direction"></span>&deg;</p>
+        <p>Wind Chill: <span id="windChillOut"></span></p>
+      </div>
+    </section>
+
+
+    <section class="forecast">
+      <h3>Ten Day Forecast</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+            <th>Day 4</th>
+            <th>Day 5</th>
+            <th>Day 6</th>
+            <th>Day 7</th>
+            <th>Day 8</th>
+            <th>Day 9</th>
+            <th>Day 10</th>
+          </tr>
+      	</thead>
+        <tbody>
+          <tr>
+            <td>89&deg;F</td>
+            <td>87&deg;F</td>
+            <td>78&deg;F</td>
+            <td>75&deg;F</td>
+            <td>72&deg;F</td>
+            <td>72&deg;F</td>
+            <td>79&deg;F</td>
+            <td>83&deg;F</td>
+            <td>85&deg;F</td>
+            <td>89&deg;F</td>
+          </tr>
+      	</tbody>
+      </table>
+    </section>
+
+    <article>
+      <h3>Franklin Breaks Record</h3>
+      <img src="../../images/rexburg.jpg"
+       alt="#">
+      <p class="town-article">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script>$("#footer").load("modules/footer.html");</script>
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/weatherdata.js"></script>
+  <script src="scripts/windchill.js"></script>
+
+</body>
+</html>

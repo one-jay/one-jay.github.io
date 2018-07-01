@@ -21,7 +21,17 @@
       id="logo" alt="logo" >
   </header>
 
-  <nav id="nav"></nav>
+  <nav id="nav">
+    <button onclick="toggleMenu()">&#9776;</button>
+    <ul id="primaryNav" class="hide">
+      <li><a href="home.html">Home</a></li>
+      <li class="active"><a href="franklin.html">Franklin</a></li>
+      <li><a href="greenville.html">Greenville</a></li>
+      <li><a href="springfield.html">Springfield</a></li>
+      <li><a href="stormcenter.html">Storm Center</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
 
   <main>
     <figure class="franklin">
@@ -104,13 +114,10 @@
 
   <footer id="footer"></footer>
 
-    <script>$("#footer").load("modules/footer.html");</script>
-    <script>$("#nav").load("modules/navigation.html");</script>
-    <script src="scripts/nav.js"></script>
-    <script src="scripts/wayfinding.js"></script>
-    <script src="scripts/weatherdata.js"></script>
-    <script src="scripts/windchill.js"></script>
-    <script src="scripts/current-date.js"></script>
+  <script>$("#footer").load("modules/footer.html");</script>
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/weatherdata.js"></script>
+  <script src="scripts/windchill.js"></script>
 
 </body>
 </html>

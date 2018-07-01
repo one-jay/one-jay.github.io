@@ -1,7 +1,7 @@
-function wayfinding(){
-    var path = window.location.pathname.split('/').pop();
 
-    var target = $('a [href="' + path + '"]');
-    
-    target.addClass('active');
-}
+var path = window.location.pathname.split('/').pop();
+console.log("path="+path);
+var target = $('li:contains(path)');
+
+target.addClass('active');
+console.log("target="+target);
