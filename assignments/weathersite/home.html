@@ -2,27 +2,28 @@
 <html lang="en-us">
 <head>
   <title>Home | Quad-Cities Weather Station</title>
-  <meta name="description" content="cit230 week5 assignment">
+  <meta name="description" content="cit230 weather site">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sunflower:300" >
-  <link rel="stylesheet" href="styles/normalize.css" />
-  <link rel="stylesheet" href="styles/main.css" />
-  <link rel="stylesheet" href="styles/medium.css" />
-  <link rel="stylesheet" href="styles/large.css" />
+
+  <meta id="styles" name="stylesheets" content="modular">
+  <script>$("#styles").load("modules/stylesheets.html");</script>
 
 </head>
 <body>
   <header>
-    <button onclick="toggleMenu()">&#9776;</button>
     <div>
-      <h1 class="clearfix">Home</h1>
+      <button onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="headings">
+      <h1>Quad-Cities Weather</h1>
       <h3>The only weather site you'll ever need!</h3>
     </div>
-      <img src="images/quadCities.jpg"
-        id="logo" alt="logo">
+    <div class="logo">
+      <img src="images/quadCities1.jpg" alt="logo">
+    </div>
   </header>
 
   <nav id="nav">
@@ -39,6 +40,7 @@
 
   <main>
     <article>
+      <h4>Featured Story:</h4>
       <a href="springfield.html">
       <h2>Fantastic Tornado Rips Through Springfield</h2></a>
       <figure class="franklin">

@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-  <title>Image Gallery | Quad-Cities Weather Station</title>
+  <title>Storm Center | Quad-Cities Weather Station</title>
+  <meta name="description" content="cit230 weather site">
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="cit230 week7 assignment">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
-  <link rel="stylesheet" href="../../styles/normalize.css" />
-  <link rel="stylesheet" href="styles/main.css" />
-  <link rel="stylesheet" href="styles/medium.css" />
-  <link rel="stylesheet" href="styles/large.css" />
+  <meta id="styles" name="stylesheets" content="modular">
+  <script>$("#styles").load("modules/stylesheets.html");</script>
 
-    <script>
-        function adjustRating(rating) {
-            document.getElementById("ratingvalue").innerHTML = rating;
-        }
-    </script>
+  <script>
+      function adjustRating(rating) {
+          document.getElementById("ratingvalue").innerHTML = rating;
+      }
+  </script>
 </head>
 <body>
   <header>
-    <h1>Storm Center</h1>
-    <!--<img src="../../images/quadCities.jpg"
-      id="logo" alt="logo">-->
+    <div>
+      <button onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="headings">
+      <h1>Storm Center</h1>
+      <h3>User submitted weather events</h3>
+    </div>
+    <div class="logo">
+      <img src="images/quadCities1.jpg" alt="logo">
+    </div>
   </header>
 
   <nav id="nav">
-    <button onclick="toggleMenu()">&#9776;</button>
     <ul id="primaryNav" class="hide">
       <li><a href="home.html">Home</a></li>
       <li><a href="franklin.html">Franklin</a></li>
@@ -40,7 +45,7 @@
   <main>
     <h2>Experiencing intense weather?</h2>
     <img src="images/blown.gif" alt="Man in storm" />
-    <h3>Let others know, by completing the form below. </h3>
+    <h3>Let us know, by completing the form below. </h3>
     <form method="get" action="thanks.html">
         <label>Full Name</label>
         <input name="fullname" type="text" pattern="[A-Za-z]{5,}" required>
