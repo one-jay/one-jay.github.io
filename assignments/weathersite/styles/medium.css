@@ -7,7 +7,7 @@
 
     }
 
-    nav button {display: none;}  /* hamburger button does not need to be shown in the medium on up views */
+    button {display: none;}  /* hamburger button does not need to be shown in the medium on up views */
 
     nav ul.hide {display: block;}
 

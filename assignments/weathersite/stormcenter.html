@@ -38,24 +38,26 @@
   </nav>
 
   <main>
-
+    <h2>Experiencing intense weather?</h2>
+    <img src="images/blown.gif" alt="Man in storm" />
+    <h3>Let others know, by completing the form below. </h3>
     <form method="get" action="thanks.html">
-        <label for="fullname">Full Name</label>
+        <label>Full Name</label>
         <input name="fullname" type="text" pattern="[A-Za-z]{5,}" required>
 
-        <label for="email">Email</label>
+        <label>Email</label>
         <input name="email" type="email" placeholder="username@domain.com">
 
-        <label for="phone">Phone</label>
+        <label>Phone</label>
         <input name="phone" type="tel" required>
 
-        <label for="zip">Zip Code</label>
+        <label>Zip Code</label>
         <input name="zip" type="number" required>
 
-        <label for="date">Storm Date</label>
+        <label>Storm Date</label>
         <input name="date" type="date">
 
-        <label for="type">Storm Type</label>
+        <label>Storm Type</label>
         <input name="type" list="stormtypes" >
             <datalist id="stormtypes">
                 <option value="Flash Flood">
@@ -67,11 +69,11 @@
             </datalist>
 
         <div id="range">
-		<label for="rating">Rating (1 to 10)</label><span id="ratingvalue">5</span></div>
-		<input type="range" id="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+		<label>Rating (0 to 10)</label><span id="ratingvalue">5</span></div>
+		<input type="range" id="rating" value="5" min="0" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
 
 
-        <label for="region">Storm Region</label>
+        <label>Storm Region</label>
         <select name="region">
             <option value="..." disabled>Select Region...</option>
             <option value="Fanklin">Franklin</option>
@@ -80,13 +82,13 @@
         </select>
 
         <div class="radio">
-        <label for="danger">User in Danger?</label>
+        <label>User in Danger?</label>
         <input name="danger" type="radio" value="Yes">Yes
         <input name="danger" type="radio" value="No">No
         <input name="danger" type="radio" value="Maybe">Maybe
         </div>
 
-        <label for="comments">Additional Info / Comments</label>
+        <label>Additional Info / Comments</label>
         <textarea name="comments" rows="5" ></textarea>
 
 

@@ -7,13 +7,25 @@ body {
   font-size: 16px;
   font-family: 'Sunflower', Ubuntu, serif;
   margin: 2%;
+  background-color: lightgray;
 }
 
 header, nav, main, footer { /* the comma between the selectors means apply the following CSS declarations to all of the listed elements */
   max-width: 600px; /* Declare the maximum width and other main element rules to limit the stretch on larger/wider views */
 }
 
-header {}
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+button {
+  justify-content: flex-start;
+  font-size: 1.5em;
+  background-color: transparent;
+  border: none;
+  margin: .2em 2%;
+}
 header h1, h3 {
   text-align: center;
 }
@@ -21,6 +33,7 @@ header img {
   float: right;
   width: 15%;
   max-width: 120px;
+  height: 15%;
 }
 header .subheading {}
 
@@ -33,13 +46,7 @@ nav {
   background: linear-gradient(to bottom, #a9e4f7 0%,#0fb4e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */
 }
-nav button {
-  justify-content: flex-start;
-  font-size: 1.5em;
-  background-color: transparent;
-  border: none;
-  margin: .2em 2%;
-}
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -89,7 +96,7 @@ label{
   margin-top: 1em;
 }
 input{
-  background-color: lightgray;
+  background-color: white;
   border: none;
   margin-bottom: 1em;
   height: 3em;
