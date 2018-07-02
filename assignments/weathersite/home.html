@@ -2,8 +2,8 @@
 <html lang="en-us">
 <head>
   <title>Home | Quad-Cities Weather Station</title>
-  <meta name="description" content="cit230 weather site">
 
+  <meta name="description" content="cit230 weather site">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -28,14 +28,7 @@
 
   <nav id="nav">
 
-    <ul id="primaryNav" class="hide">
-      <li class="active"><a href="home.html">Home</a></li>
-      <li><a href="franklin.html">Franklin</a></li>
-      <li><a href="greenville.html">Greenville</a></li>
-      <li><a href="springfield.html">Springfield</a></li>
-      <li><a href="stormcenter.html">Storm Center</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-    </ul>
+
   </nav>
 
   <main>
@@ -45,12 +38,8 @@
       <h2>Fantastic Tornado Rips Through Springfield</h2></a>
       <figure class="franklin">
         <a href="springfield.html">
-        <img srcset="images/tornado-big.jpg 550w,
-        images/tornado-big.jpg 900w,
-        images/tornado-big.jpg 1600w"
-        src="images/tornado-big.jpg"
-        sizes="100vw"
-          alt="franklin-1600w"/></a>
+        <img src="images/tornado-big.jpg"
+          alt="tornado destroys springfield"/></a>
           <figcaption>
             Fiery tornado threatens nearby church building
           </figcaption>
@@ -61,9 +50,10 @@
   </main>
 
   <footer id="footer"></footer>
-
+  <script>$("#nav").load("modules/navigation.html", function(){
+          $("#home").attr("class","active");});</script>
   <script>$("#footer").load("modules/footer.html");</script>
   <script src="scripts/nav.js"></script>
-
+  <script></script>
 </body>
 </html>
