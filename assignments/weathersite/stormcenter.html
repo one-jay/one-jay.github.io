@@ -26,16 +26,7 @@
     </div>
   </header>
 
-  <nav id="nav">
-    <ul id="primaryNav" class="hide">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="franklin.html">Franklin</a></li>
-      <li><a href="greenville.html">Greenville</a></li>
-      <li><a href="springfield.html">Springfield</a></li>
-      <li class="active"><a href="stormcenter.html">Storm Center</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-    </ul>
-  </nav>
+  <nav id="nav"></nav>
 
   <main>
     <h2>Experiencing intense weather?</h2>
@@ -100,7 +91,8 @@
   <footer id="footer"></footer>
 
   <script>$("#footer").load("modules/footer.html");</script>
-
+  <script>$("#nav").load("modules/navigation.html", function(){
+          $("#home").attr("class","active");});</script>
   <script src="scripts/nav.js"></script>
   <script src="scripts/current-date.js"></script>
   <script>

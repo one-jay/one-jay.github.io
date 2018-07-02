@@ -26,10 +26,7 @@
     </div>
   </header>
 
-  <nav id="nav">
-
-
-  </nav>
+  <nav id="nav"></nav>
 
   <main>
     <article>
@@ -50,9 +47,10 @@
   </main>
 
   <footer id="footer"></footer>
+
+  <script>$("#footer").load("modules/footer.html");</script>
   <script>$("#nav").load("modules/navigation.html", function(){
           $("#home").attr("class","active");});</script>
-  <script>$("#footer").load("modules/footer.html");</script>
   <script src="scripts/nav.js"></script>
   <script></script>
 </body>
