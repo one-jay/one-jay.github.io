@@ -8,7 +8,12 @@
 	<script>
 	$(function(){
 		// All jQuery code goes here
-
+        $('.dropdownMenu > li').hover(function(){
+        //    $(this).children('ul').slideDown(300);
+        //}, function(){
+        //    $(this).children('ul').slideUp(300);
+            $(this).children('ul').slideToggle(300);
+        })
 	})
 	</script>
 </head>

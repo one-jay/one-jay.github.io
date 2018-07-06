@@ -4,11 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Form Event Basics</title>
 	<link rel="stylesheet" href="css/formeventbasics.css">
-	<script src="js/jquery-2.2.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>//backup jQuery file, in case CDN is down
+        window.jQuery || document.write('<script src="js/jquery-2.2.1.min.js"><\/script>');// << why is \ needed here?
+    </script>
 	<script>
 	$(function(){
 		// jQuery Code goes here
-
+        $('input').on({
+            focus: function(){
+                $(this).addClass('focus');
+            },
+            blur: function(){
+                $(this).removeClass('focus').removeClass('select');
+            },
+            select: function(){
+                $(this).addClass('select');
+            }
+        })
+        
+        $('#accountType').change(function(){
+            alert("You selected the "+ $(this).val() +" Package!");
+        })
 	})
 	</script>
 </head>
