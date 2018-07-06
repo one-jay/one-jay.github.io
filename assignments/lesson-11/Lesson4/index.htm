@@ -9,7 +9,7 @@
 	$(function(){
 		// jQuery Code goes here
 		console.log( $('input').css('background-color') );
-        
+
         var toggleStyle = function(){
             /* rather than use a selector each time...
             if( $('input').css('background-color') === 'rgb(255, 0, 0)' ){
@@ -20,7 +20,7 @@
                 $('input').css('background-color', 'rgb(255,0,0)');
             }*/
             //you can set the selector to a variable
-            
+
             var inputs = $('input');
             if( inputs.css('background-color') === 'rgb(255, 0, 0)' ){
                 //set bgc to white
@@ -31,13 +31,13 @@
             }
         }
         $('#ReqAQuoteBtn').click(toggleStyle);
-        
-                    
+
+
         $('.coreValues').append('<li>I was appended</li>');
         $("<li>I'm being appended to!</li>").appendTo('.coreValues');
         $('.coreValues').prepend('<li>I was prepended</li>');
         $("<li>I'm being prepended to!</li>").prependTo('.coreValues');
-        
+
         var fillEmpty = function(){
             var name = $('input[name=nameVal]');
             if( name.val() == '' ){
@@ -45,7 +45,7 @@
             }
         }
         $('#ReqAQuoteBtn').click(fillEmpty);
-        
+
 	})
 	</script>
 </head>
@@ -140,7 +140,8 @@
 		</div>
 
 		<div class="footer">
-			<h5>© Alcove Digital Systems | <a href="#">Terms of Use</a></h5>
+			<h5>© Alcove Digital Systems | <a href="#">Terms of Use</a>
+			 | <a href="animatedMeunBegin.htm">animatedMenu</a> | <a href="DropDownMenuBegin.htm">DropDownMenu</a> | <a href="fruitBasketBegin.htm">fruitBasket</a> | <a href="insertHTMLBegin.htm">insertHTML</a> | <a href="toggleButtonBegin.htm">toggleButton</a> | <a href="#">Lesson5</a></h5>
 		</div>
 	</div>
 </body>
