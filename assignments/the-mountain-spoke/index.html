@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Home | The Mountain Spoke</title>
+
+  <meta name="description" content="cit230 term project">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Knewave" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <meta id="styles" name="stylesheets" content="modular">
+  <script>$("#styles").load("modules/stylesheets.html");</script>
+
+</head>
+<body>
+  <header>
+    <div>
+      <button onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="headings">
+      <h1>Quad-Cities Weather</h1>
+      <h3>The only weather site you'll ever need!</h3>
+    </div>
+    <div class="logo">
+      <img src="images/quadcities1.jpg" alt="logo">
+    </div>
+  </header>
+
+  <nav id="nav"></nav>
+
+  <main>
+    <article>
+      <h4>Featured Story:</h4>
+      <a href="springfield.html">
+      <h2>Fantastic Tornado Rips Through Springfield</h2></a>
+      <figure class="franklin">
+        <a href="springfield.html">
+        <img src="images/tornado-big.jpg"
+          alt="tornado destroys springfield"/></a>
+          <figcaption>
+            Fiery tornado threatens nearby church building
+          </figcaption>
+      </figure>
+      <p class="town-article">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script>$("#footer").load("modules/footer.html");</script>
+  <script>$("#nav").load("modules/navigation.html", function(){
+          $("#home").attr("class","active");});</script>
+  <script src="scripts/nav.js"></script>
+  <script></script>
+</body>
+</html>
