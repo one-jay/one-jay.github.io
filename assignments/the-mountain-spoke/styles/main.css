@@ -2,14 +2,14 @@
 
 * {
   box-sizing: border-box;
-  border: 1px solid gray;
   } /*  This wildcard applies to all elements ensuring a box layout model */
 
 body {
   font-size: 1em;
-
-    font-family: 'Fira Sans', sans-serif;
-
+  font-family: 'Fira Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -23,29 +23,21 @@ header, nav, main, footer { /* the comma between the selectors means apply the f
 header {
   display: flex;
   justify-content: space-between;
-    align-items: center;
+  align-items: center;
+}
+header a {
+  text-decoration: none;
+  color: #205D89
 }
 button {
-  font-size: 1.5em;
+  font-size: 2em;
   background-color: transparent;
   border: none;
   margin: .2em 2%;
-}
-.headings{
-  text-align: center;
-    flex-grow: 2;
-
-}
-header h1 {
-
-}
-header h3 {
-
-
+  color: #205D89;
 }
 header .logo{
-    width: 15%;
-
+    width: 12%;
 }
 .logo img{
   width: 100%;
@@ -55,14 +47,13 @@ header .subheading {}
 
 nav {
   width: 100%;
-  border: 2px solid darkblue;
 
 }
-
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  background-color: #205D89;
 }
 nav ul.hide{
   display: none;
@@ -71,70 +62,45 @@ nav ul li {}
 nav ul li a {
   display: block;
   text-decoration: none;
-
+  color: lightgray;
+  font-size: 1.5em;
+  padding: .2em;
 }
 nav ul li.active a {
-
+  background-color: #F4913C;
+  color: #205D89;
 }
 nav ul li a:hover {
+  background-color: #FED313;
+  color: #205D89
 
 }
 
 main {
+  width: 100%;
 }
-main.gallery{
-  display: grid;
-  grid-column: 1;
+main div{
+  position: relative;
+  width: 100%;
 }
-main h2 {}
-main figure {}
-main figure img {
-
+main div img{
+  min-width: 100%;
+  max-height: 300px;
 }
-figcaption{
-}
-
-
-form{
-
-}
-label{
-
-}
-input{
-
-}
-div#range{
-
-}
-.radio{
-
-}
-div.radio input{
-
-}
-textarea{
-
-}
-#button{
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9e4f7+0,0fb4e7+100;Ble+3D+%235 */
-  background: #a9e4f7; /* Old browsers */
-  background: -moz-linear-gradient(top, #a9e4f7 0%, #0fb4e7 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #a9e4f7 0%,#0fb4e7 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #a9e4f7 0%,#0fb4e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */
-    margin-bottom: 3em;
+main div h2{
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  text-shadow: 1px 1px 2px black;
 }
 
-article{
-
-}
-article img {
-
-}
 
 footer {
   text-align: center;
+  background-color: #205D89;
+  color: lightgray;
+  width: 100%;
 }
 
 .clearfix:after{
