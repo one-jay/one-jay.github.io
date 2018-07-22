@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Adventure Tours | The Mountain Spoke | Mountain Bikes | Events | Sales | Service | Bozeman, MT</title>
+
+  <meta name="description" content="cit230 term project">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <meta id="styles" name="stylesheets" content="modular">
+  <script>$("#styles").load("modules/stylesheets.html");</script>
+</head>
+
+
+<body>
+
+  <header>
+    <div>
+      <button onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="headings">
+      <a href="index.html">
+        <h1>The Mountain Spoke</h1>
+      </a>
+    </div>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="logo"/>
+    </div>
+  </header>
+
+  <nav id="nav"></nav>
+
+  <main>
+    <section>
+      <div>
+        <a href="#">
+          <img src="images/bozebike2.jpg" alt="#"/>
+          <h2>Adventure Tours</h2>
+        </a>
+      </div>
+      <p>
+        At The Mountain Spoke, we offer daily adventure tours for all skill levels. Great for large groups, families, couples, and everyone in between. Bring your own bike or rent one of ours.
+      </p>
+      <div>
+      <a href="#">
+        <img src="images/bozefam.jpg" alt="#"/>
+        <h2>Family Fun</h2>
+      </a>
+    </div>
+    <p>
+      Check out the trail map to see all of the available trails for tours. Choose a slow and easy trail, short or long, to soak up and enjoy the natural beauty, or choose a faster paced and more intense trail to get your adrenaline pumping!
+    </p>
+
+      <div>
+        <a href="trailmap.pdf">
+          <img src="images/trailmap.jpg" alt="#"/>
+          <h2>Trail Map</h2>
+        </a>
+      </div>
+        <p>
+          Bike rentals are only $50 per bike per day and tour guides are only $20 per guide per hour. Contact us to book your reservation!
+        </p>
+
+      <div>
+        <a href="contact.html">
+          <img src="images/contactus.jpg" alt="#"/>
+          <h2>Contact Us</h2>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script>$("#footer").load("modules/footer.html");</script>
+  <script>$("#nav").load("modules/navigation.html", function(){
+          $("#home").attr("class","active");
+        });</script>
+  <script src="scripts/nav.js"></script>
+  <script></script>
+</body>
+</html>

@@ -15,9 +15,12 @@ body {
 h1, h2, h3, h4, h5, h6{
   font-family: 'Knewave', cursive;
 }
+h3{
+  margin: 0;
+}
 
 header, nav, main, footer { /* the comma between the selectors means apply the following CSS declarations to all of the listed elements */
-  max-width: 600px; /* Declare the maximum width and other main element rules to limit the stretch on larger/wider views */
+  max-width: 600px;
 }
 
 header {
@@ -72,20 +75,50 @@ nav ul li.active a {
 }
 nav ul li a:hover {
   background-color: #FED313;
-  color: #205D89
+  color: #205D89;
 
 }
 
 main {
   width: 100%;
 }
+main section p, form, .p {
+  border: 10px solid #205D89;
+  padding: .5em;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form * {
+  margin-left: .5em;
+  margin-right: .5em;
+}
+input {
+  height: 30px;
+  margin-bottom: 10px;
+}
+#button {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #F4913C;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: 'Fira Sans', sans-serif;
+}
+#button:hover {
+  background-color: #FED313;
+}
+
 main div{
   position: relative;
   width: 100%;
 }
 main div img{
   min-width: 100%;
-  max-height: 300px;
+  max-width: 100%;
+
 }
 main div h2{
   color: white;

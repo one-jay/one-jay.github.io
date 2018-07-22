@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>The Mountain Spoke | Mountain Bikes | Adventure Tours | Events | Sales | Service | Bozeman, MT</title>
+
+  <meta name="description" content="cit230 term project">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <meta id="styles" name="stylesheets" content="modular">
+  <script>$("#styles").load("modules/stylesheets.html");</script>
+</head>
+
+
+<body>
+
+  <header>
+    <div>
+      <button onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="headings">
+      <a href="index.html">
+        <h1>The Mountain Spoke</h1>
+      </a>
+    </div>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="logo"/>
+    </div>
+  </header>
+
+  <nav id="nav"></nav>
+
+  <main>
+    <section>
+
+
+      <div>
+        <a href="#">
+          <img src="images/bozebike4.jpg" alt="#"/>
+          <h2>Upcoming Events</h2>
+        </a>
+      </div>
+      <p>
+        The Mountain Spoke sponsors multiple local events throughout the year, and the biggest of them all is finally upon us once again.
+      </p>
+
+      <div>
+        <a href="#">
+          <img src="images/bozebike5.jpg" alt="#"/>
+          <h2>The Continental Divide</h2>
+        </a>
+      </div>
+      <p>
+        The Continental Divide - September 7-8, 2018<br /><br />
+        Cycle the Continental Divide is the most epic of mountain bike riding events, featuring countless miles of rugged terrain as far as the eye can see. <br /><br />
+        Spectators can come watch the event for only $2 per person (children under 12 are free).<br /><br />
+        Think you're up for the challenge? Entry fees for participants are $100 per person. Those who complete the ride will earn a keepsake medallion, and the winner gets a $10,000 shopping spree to The Mountain Spoke bike store!<br /><br />
+        To register, complete the form below.
+      </p>
+      <form method="get" action="thanks.html">
+          <label>Name</label>
+          <input name="fullname" type="text" required>
+
+          <label>Phone</label>
+          <input name="phone" type="tel" required>
+
+          <label>Email</label>
+          <input name="email" type="email" required>
+
+          <label>Date of Birth</label>
+          <input name="dob" type="date" required />
+
+          <label>Home State (or Country if abroad)</label>
+          <input name="home" type="text" required />
+
+          <label>Special Accomodations / Comments</label>
+          <textarea name="comments" rows="5" ></textarea>
+
+          <input id="button" type="submit" value="Contact Me">
+      </form>
+      <div>
+        <a href="contact.html">
+          <img src="images/contactus.jpg" alt="#"/>
+          <h2>Contact Us</h2>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script>$("#footer").load("modules/footer.html");</script>
+  <script>$("#nav").load("modules/navigation.html", function(){
+          $("#home").attr("class","active");
+        });</script>
+  <script src="scripts/nav.js"></script>
+  <script></script>
+</body>
+</html>
