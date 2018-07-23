@@ -39,20 +39,23 @@
 
   <main>
     <section>
-      <p>
-        Welcome to The Mountain Spoke, your premier destination for mountain bikes situated in the heart of Bozeman, Montana. We offer great deals on mountain bikes and the best service in town. We also offer guided adventure tours and host local events. Feel free to explore and reach out to us to get started!
-      </p>
-
       <div>
-        <a href="services.html">
+        <a href="#">
           <img src="images/bozebike6.jpg" alt="#"/>
-          <h2>Service Specials</h2>
+          <h2>Service</h2>
+        </a>
+      </div>
+      <p>
+        The Mountain Spoke offers a full range of services to mountain bikes, from simple flat repairs to complete overhauls. See our pricing table below and contact us to schedule your bike for service.
+      </p>
+      <div>
+        <a href="#">
+          <img src="images/bikerepair.jpg" alt="#"/>
+          <h2>Repairs</h2>
         </a>
       </div>
 
-      <div id="table">
-
-      </div>
+      <div id="table"></div>
 
       <div>
         <a href="contact.html">
@@ -65,22 +68,25 @@
 
   <footer id="footer"></footer>
 
-  <script>$("#footer").load("modules/footer.html");</script>
-  <script>
+
+  <script>// load nav and set wayfinding
     $("#nav").load("modules/navigation.html", function(){
-          $("#home").attr("class","active");
+          $("#services").attr("class","active");
           });
   </script>
-  <script src="scripts/nav.js"></script>
-  <script>
+  <script src="scripts/nav.js">//activate hamburger nav
+  </script>
+  <script>// load and populate table
     $("#table").tabulator({
       layout:"fitColumns", //fit columns to width of table (optional)
-      columns:[ //Define Table Columns
-          {title:"Service Name", field:"name"},
-          {title:"Turnaround Time", field:"time", width:150},
-          {title:"Price", field:"price"},
+      columns:[
+          {title:"Service", field:"name", width:150},
+          {title:"Description", field:"desc"},
+          {title:"Time", field:"time", width:90},
+          {title:"Price", field:"price", width:80},
       ]}),
     $("#table").tabulator("setData", "data/service.json");
   </script>
+  <script>$("#footer").load("modules/footer.html");</script>
 </body>
 </html>

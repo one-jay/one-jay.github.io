@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Products | Sales | The Mountain Spoke | Mountain Bikes | Adventure Tours | Events | Service | Bozeman, MT</title>
+
+  <meta name="description" content="cit230 term project">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles/flexslider.css" type="text/css">
+  <script src="scripts/jquery.flexslider.js"></script>
+
+  <meta id="styles" name="stylesheets" content="modular">
+  <script>$("#styles").load("modules/stylesheets.html");</script>
+</head>
+
+
+<body>
+
+  <header>
+    <div>
+      <button onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="headings">
+      <a href="index.html">
+        <h1>The Mountain Spoke</h1>
+      </a>
+    </div>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="logo"/>
+    </div>
+  </header>
+
+  <nav id="nav"></nav>
+
+  <main>
+    <section>
+      <div>
+        <a href="products.html">
+          <img src="images/bozebike3.jpg" alt="#"/>
+          <h2>Bike Sales</h2>
+        </a>
+      </div>
+      <p>
+        At The Mountain Spoke, we offer a full lineup of top shelf mountain bikes, from hardtails to those with multilink rear suspension to those with cutting edge swingarms, our bikes leave nothing to be unsatisfied!
+      </p>
+
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="images/bike-felt.jpg" alt="felt"/>
+    </li>
+    <li>
+      <img src="images/bike-kona.jpg" alt="kona"/>
+    </li>
+    <li>
+      <img src="images/bike-ibis.jpg" alt="ibis"/>
+    </li>
+    <li>
+      <img src="images/bike-marin.jpg" alt="marin"/>
+    </li>
+  </ul>
+</div>
+
+      <div>
+        <a href="contact.html">
+          <img src="images/contactus.jpg" alt="#"/>
+          <h2>Contact Us</h2>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script>$("#footer").load("modules/footer.html");</script>
+  <script>$("#nav").load("modules/navigation.html", function(){
+          $("#home").attr("class","active");
+        });</script>
+  <script src="scripts/nav.js"></script>
+  <script>$('.flexslider').flexslider();</script>
+</body>
+</html>

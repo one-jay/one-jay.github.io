@@ -1,12 +1,26 @@
 [
  {
    "name": "Flat Tire",
+   "desc": "Replace tube",
    "time": "1/2 hour",
    "price": "$20"
  },
  {
    "name": "Tune Up",
+   "desc": "Clean and lube moving parts",
    "time": "1 hour",
-   "price": "$40"
+   "price": "$35"
+ },
+ {
+   "name": "Shock/Forks Rebuild",
+   "desc": "Replace shock internal parts",
+   "time": "2 hours",
+   "price": "$65"
+ },
+ {
+   "name": "Overhaul",
+   "desc": "Complete teardown and rebuild",
+   "time": "4 hours",
+   "price": "$120"
  }
 ]
