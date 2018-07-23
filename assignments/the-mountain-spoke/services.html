@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>The Mountain Spoke | Mountain Bikes | Adventure Tours | Events | Sales | Service | Bozeman, MT</title>
+
+  <meta name="description" content="cit230 term project">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/3.5.3/css/tabulator.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/3.5.3/js/tabulator.min.js"></script>
+
+  <meta id="styles" name="stylesheets" content="modular">
+  <script>$("#styles").load("modules/stylesheets.html");</script>
+</head>
+
+
+<body>
+
+  <header>
+    <div>
+      <button onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="headings">
+      <a href="index.html">
+        <h1>The Mountain Spoke</h1>
+      </a>
+    </div>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="logo"/>
+    </div>
+  </header>
+
+  <nav id="nav"></nav>
+
+  <main>
+    <section>
+      <p>
+        Welcome to The Mountain Spoke, your premier destination for mountain bikes situated in the heart of Bozeman, Montana. We offer great deals on mountain bikes and the best service in town. We also offer guided adventure tours and host local events. Feel free to explore and reach out to us to get started!
+      </p>
+
+      <div>
+        <a href="services.html">
+          <img src="images/bozebike6.jpg" alt="#"/>
+          <h2>Service Specials</h2>
+        </a>
+      </div>
+
+      <div id="table">
+
+      </div>
+
+      <div>
+        <a href="contact.html">
+          <img src="images/contactus.jpg" alt="#"/>
+          <h2>Contact Us</h2>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script>$("#footer").load("modules/footer.html");</script>
+  <script>
+    $("#nav").load("modules/navigation.html", function(){
+          $("#home").attr("class","active");
+          });
+  </script>
+  <script src="scripts/nav.js"></script>
+  <script>
+    $("#table").tabulator({
+      layout:"fitColumns", //fit columns to width of table (optional)
+      columns:[ //Define Table Columns
+          {title:"Service Name", field:"name"},
+          {title:"Turnaround Time", field:"time", width:150},
+          {title:"Price", field:"price"},
+      ]}),
+    $("#table").tabulator("setData", "data/service.json");
+  </script>
+</body>
+</html>

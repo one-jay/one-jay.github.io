@@ -1,0 +1,12 @@
+[
+ {
+   "name": "Flat Tire",
+   "time": "1/2 hour",
+   "price": "$20"
+ },
+ {
+   "name": "Tune Up",
+   "time": "1 hour",
+   "price": "$40"
+ }
+]

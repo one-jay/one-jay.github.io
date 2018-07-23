@@ -82,7 +82,7 @@ nav ul li a:hover {
 main {
   width: 100%;
 }
-main section p, form, .p {
+main section p, form, .p, #table {
   border: 10px solid #205D89;
   padding: .5em;
 }
@@ -99,7 +99,7 @@ input {
   margin-bottom: 10px;
 }
 #button {
-  width: 100px;
+  width: 200px;
   height: 30px;
   margin-top: 10px;
   background-color: #F4913C;
