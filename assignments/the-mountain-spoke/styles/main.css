@@ -15,7 +15,7 @@ body {
 h1, h2, h3, h4, h5, h6{
   font-family: 'Knewave', cursive;
 }
-h3{
+h3 {
   margin: 0;
 }
 
@@ -39,10 +39,10 @@ button {
   margin: .2em 2%;
   color: #205D89;
 }
-header .logo{
+header .logo {
     width: 12%;
 }
-.logo img{
+.logo img {
   width: 100%;
 }
 header .subheading {}
@@ -58,7 +58,7 @@ nav ul {
   margin: 0;
   background-color: #205D89;
 }
-nav ul.hide{
+nav ul.hide {
   display: none;
 }
 nav ul li {}
@@ -115,16 +115,16 @@ input {
   background-color: #FED313;
 }
 
-main div{
+main div {
   position: relative;
   width: 100%;
 }
-main div img{
+main div img {
   min-width: 100%;
   max-width: 100%;
 
 }
-main div h2{
+main div h2 {
   color: white;
   position: absolute;
   bottom: 0;
