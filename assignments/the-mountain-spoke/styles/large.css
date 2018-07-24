@@ -1,18 +1,34 @@
 @media only screen and (min-width: 1024px ) {
 
-body{background-color: black;
-margin: auto auto;}
+body{
+    margin: auto auto;
+    }
 
-  header, nav, main, footer { /* the comma between the selectors means apply the following CSS declarations to all of the listed elements */
+header, nav, main, footer { 
     max-width: 1600px; /* Declare the maximum width and other main element rules to limit the stretch on larger/wider views */
+    }
 
-  }
-main.gallery{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
+button {
+    display: none;
+    }  
 
-img:hover {box-shadow: 5px 5px 10px gray;}
-figcaption{ display: block;}
+nav ul.hide {
+    display: block;
+    }
 
-  }
+nav ul li {
+    display: inline-flex;
+    }
+
+nav ul li a {
+  border: none;
+  border-right: 1px solid rgba(0,0,0,.5);
+  padding: 1rem;
+    }
+    
+header .logo{
+        margin: .5em;
+    }
+    
+}    
+

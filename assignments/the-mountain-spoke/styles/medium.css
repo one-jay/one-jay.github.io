@@ -3,34 +3,12 @@
     /* Only CSS write declarations that need to be changed. Do not duplicated declarations that are already established in the main.css */
 
     body {
-      background-color: gray;
+        max-width: 1024px;
     }
+    
     header, nav, main, footer { /* the comma between the selectors means apply the following CSS declarations to all of the listed elements */
       max-width: 900px; /* Declare the maximum width and other main element rules to limit the stretch on larger/wider views */
 
     }
 
-    button {display: none;}  /* hamburger button does not need to be shown in the medium on up views */
 
-    nav ul.hide {display: block;}
-
-    nav ul li {display: inline;
-    float: left;
-  }
-
-    nav ul li a{
-      border: none;
-      border-right: 1px solid rgba(0,0,0,.5);
-      padding: 1rem;
-    }
-
-
-    body{
-      max-width: 1024px;
-    }
-
-
-
-    img:hover {box-shadow: 5px 5px 10px gray;}
-
-  }
