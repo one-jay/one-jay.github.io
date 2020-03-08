@@ -1,61 +1,61 @@
-// function onChange(){
-//     document.getElementById('tbody').innerHTML = "";
-//   }
+function onChange(){
+    document.getElementById('tbody').innerHTML = "";
+  }
 
-//   var parsed;
-//     function getStudents() {
-//       var jsonFile = document.getElementById("fileName").value;
-//       console.log('input received: ' + jsonFile);
-//       if(jsonFile != 'json.txt' && jsonFile != 'json1.txt'){
-//         document.getElementById('help').style.color = 'red';
-//         document.getElementById('tbody').innerHTML = "";
-//       }else           document.getElementById('help').style.color = 'black';
+  var parsed;
+    function getStudents() {
+      var jsonFile = document.getElementById("fileName").value;
+      console.log('input received: ' + jsonFile);
+      if(jsonFile != 'json.txt' && jsonFile != 'json1.txt'){
+        document.getElementById('help').style.color = 'red';
+        document.getElementById('tbody').innerHTML = "";
+      }else           document.getElementById('help').style.color = 'black';
 
-//       var xhttp = new XMLHttpRequest();
-//       xhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
-//           var response = this.responseText;
-//           //document.getElementById("jsonOutput").innerHTML = response;
-//           parsed = JSON.parse(response);
-//           console.log('parsed.students.length: ' + parsed.students.length);
-//           console.log('Object.keys(parsed): ' + Object.keys(parsed.students).length);
-//           var globalCounter = 0;
-//           var tbody = document.getElementById('tbody');
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var response = this.responseText;
+          //document.getElementById("jsonOutput").innerHTML = response;
+          parsed = JSON.parse(response);
+          console.log('parsed.students.length: ' + parsed.students.length);
+          console.log('Object.keys(parsed): ' + Object.keys(parsed.students).length);
+          var globalCounter = 0;
+          var tbody = document.getElementById('tbody');
 
-//           for (var i = 0; i < Object.keys(parsed.students).length; i++) {
-//               var tr = "<tr>";
-//               tr += "<td>" + parsed.students[i].first + "</td>" 
-//                   + "<td>" + parsed.students[i].last + "</td>"
-//                   + "<td>" + parsed.students[i].address.city 
-//                   + ", " + parsed.students[i].address.state
-//                   + " " + parsed.students[i].address.zip  + "</td>"
-//                   + "<td>" + parsed.students[i].major + "</td>"
-//                   + "<td>" + parsed.students[i].gpa + "</td>";
-//               tr += "</tr>";
-//               tbody.innerHTML += tr;
-//           }
+          for (var i = 0; i < Object.keys(parsed.students).length; i++) {
+              var tr = "<tr>";
+              tr += "<td>" + parsed.students[i].first + "</td>" 
+                  + "<td>" + parsed.students[i].last + "</td>"
+                  + "<td>" + parsed.students[i].address.city 
+                  + ", " + parsed.students[i].address.state
+                  + " " + parsed.students[i].address.zip  + "</td>"
+                  + "<td>" + parsed.students[i].major + "</td>"
+                  + "<td>" + parsed.students[i].gpa + "</td>";
+              tr += "</tr>";
+              tbody.innerHTML += tr;
+          }
 
-//         }
-//       };
-//       //var countryFile = country.value + '.txt';
-//       console.log(jsonFile);
-//       xhttp.open("GET", jsonFile, true);
-//       xhttp.send();
-//     }
+        }
+      };
+      //var countryFile = country.value + '.txt';
+      console.log(jsonFile);
+      xhttp.open("GET", jsonFile, true);
+      xhttp.send();
+    }
 
-//     function getCities(country) {
-//       console.log('country selected: ' + country.value);
-//       var xhttp = new XMLHttpRequest();
-//       xhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
-//           document.getElementById("cities").innerHTML = this.responseText;
-//         }
-//       };
-//       var countryFile = country.value + '.txt';
-//       console.log(countryFile);
-//       xhttp.open("GET", countryFile, true);
-//       xhttp.send();
-//     }
+    function getCities(country) {
+      console.log('country selected: ' + country.value);
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("cities").innerHTML = this.responseText;
+        }
+      };
+      var countryFile = country.value + '.txt';
+      console.log(countryFile);
+      xhttp.open("GET", countryFile, true);
+      xhttp.send();
+    }
 
     ///////////////////////////////////////////////////////
 
