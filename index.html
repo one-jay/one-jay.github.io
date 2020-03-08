@@ -1,49 +1,527 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="cit230 week2 assignment">
+  <head>
+    <meta charset="utf-8"/>
+    <title>CIT 261 - Fluency Evidence - Clayton Thomas</title>
+    <link rel="stylesheet" href="cit261.css">
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+    <h1>CIT 261 - Fluency Evidence - Clayton Thomas</h1>
 
-  <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+    <div class="topicGroup">
+      <h2>Javascript</h2>
+      <div>
+        <h3>Loops</h3>
+          <h4>while</h4>
+          <p>
+            The while loop performs its statement while its conditions 
+            remain true. When the program encounters the loop, it evaluates 
+            if the condition is true, and if so, it executes the statement, and then 
+            checks again if the condition is true. This process repeats itself 
+            until the condition is not true, at which point the program 
+            continues on after the while loop. A common pattern with the 
+            while loop is to have a number variable that increments with each 
+            loop, so that the loop is limited from running indefinitely. 
+          </p>
+          <h4>do while</h4>
+          <p>
+            do while is similar to while, except that the code block to execute 
+            comes before the while condition, and is therefor guaranteed to be executed 
+            at least once. The code in the do block is executed, and then if the 
+            while condition is true, executed again repeatedly until the condition 
+            is no longer true, at which point it executes any code within 
+            the while statement's braces, and then continues on with the rest of the program. 
+          </p>
+          <h4>for</h4>
+          <p>
+            Since, with most while loops a variable is used to increment through 
+            loops, the for loop is an alternate syntax that may be more concise 
+            and convenient. In it, the variable to increment with is instantiated 
+            first, then the condition to continue looping is defined, followed by the 
+            rule to increment by. So when the program reaches a for loop, 
+            it first assigns a value to the variable to increment , then checks if 
+            the condition to run is true, and if so, executes the statements within 
+            the for loop's braces, and then increments the variable to increment accordingly. 
+            Note, the declarations in the the for loop can also be placed elsewhere, such as placing 
+            the variable to increment before the loop, or the value to increment by within the loop, and 
+            it will run the same, in that case very much like a while loop. 
+          </p>
+          <h4>for in</h4>
+          <p>
+            The for in loop is a type of for each loop, in which you can 
+            loop through each of the properties of an object. 
+          </p>
+          <h4>for of</h4>
+          <p>for of is similar to for in, except instead of looping through 
+            object properties, it loops through elements in an array, or 
+            chars in a string. 
+          </p>
+          <h4>forEach</h4>
+          <p>
+            I was originally planning to cover this in JS Arrays, but decided to cover it 
+            here instead. With any array (which in itself is an object), you can use the 
+            method forEach(), and for each element in the array, pass it to 
+            a function to act upon. 
+          </p>
 
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/main.css">
-  <title>CIT 230 Assignment Portal | Clayton T. Student | BYU-Idaho</title>
-</head>
-<body>
-  <header>
-    <img src="images/December2013.JPG"
-        alt="My profile image">
-    <h1>Clayton Andrew Thomas</h1>
-  </header>
-  <nav>
-    <!--main menu to go here-->
-  </nav>
-  <main>
-    <h2>CIT 230 - Assignment Portal</h2>
-    <ul>
-      <li>Lesson #3: <a href="assignments/lesson-3/fixedhtml">Fixed HTML</a></li>
-      <li>Lesson #4: <a href="assignments/lesson-4/franklin-4">Franklin Weather Updates</a></li>
-      <li>Lesson #4: <a href="assignments/lesson-4/website-planning.pdf">website planning pdf</a></li>
-      <li>Lesson #5: <a href="assignments/lesson-5/franklin-5">Franklin Weather Updates - Lesson 5</a></li>
-      <li>Lesson #6: <a href="assignments/lesson-6/franklin-6">Franklin Weather Updates - Lesson 6</a></li>
-      <li>Lesson #7: <a href="assignments/lesson-7/franklin-7">Franklin Weather Updates - Lesson 7</a></li>
-      <li>Lesson #7: <a href="assignments/lesson-7/gallery-7">Gallery - Lesson 7</a></li>
-      <li>Lesson #8: <a href="assignments/lesson-8/tablebuild">Table Build - Lesson 8</a></li>
-      <li>Lesson #8: <a href="assignments/lesson-8/stormcenter">Storm Center - Lesson 8</a></li>
-      <li>Lesson #9: <a href="assignments/lesson-9/heroes">Super Heroes - Lesson 9</a></li>
-      <li>Lesson #9: <a href="assignments/lesson-9/api-test">Weather API test - Lesson 9</a></li>
-      <li>Lesson #9: <a href="https://www.youtube.com/watch?v=ws9D22oS1T8">API Presetation - due Lesson 9</a></li>
-      <li>Lesson #10: <a href="assignments/weathersite/home.html">Weather site complete - Lesson 10</a></li>
-      <li>Lesson #10: <a href="assignments/lesson-11/Lesson2/index.htm">jQuery tutorial - Lesson 11</a></li>
-      <li>Lesson #10: <a href="assignments/the-mountain-spoke/index.html">The Mountain Spoke - Lesson 12</a></li>
-    </ul>
-  </main>
-  <footer>
-    <p>
-      Copyright 2018 | Clayton Thomas | Queen Creek, Arizona | <a href="https://byui.edu">BYU-Idaho Online</a>
-    </p>
-  </footer>
-</body>
+
+          <!-- <p>Best car on the road: <span id="car"></span></p>
+          <p>Makes trying to keep up with Tesla: <span  id="makes"></span></p>
+          <p>Tesla, spelled out: <span id="tsla"></span></p>
+          <p>Makes that can't compete with Tesla: <br><span id="cantCompete"></span></p> -->
+
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="onejay" data-slug-hash="KKpyxWV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="loops">
+            <span>See the Pen <a href="https://codepen.io/onejay/pen/KKpyxWV">
+            loops</a> by onejay (<a href="https://codepen.io/onejay">@onejay</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+      </div>
+
+      <div>
+        <h3>Conditionals</h3>
+        <h4>Boolean</h4>
+          <p>I wanted to touch on booleans before getting into the rest 
+            of the conditionals, since they all hinge on this principle 
+            of true vs false. Why the name Boolean? It is derived from 
+            the work of English mathematician George Boole (1815-1864).
+          </p>
+        <h4>if</h4>
+          <p>The if statement evaluates an expression, and if the 
+            expression evalueates to true, the code following is executed, 
+            otherwise, the program continues on without executing the code 
+            immediately following the if statement. 
+          </p>
+        <h4>else</h4>
+          <p>The else statement can be used after an if statement 
+            to execute some code if the if's condition was not true
+          </p>
+        <h4>ternary</h4>
+          <p>The ternary, or conditional, operator is a more concise 
+            syntax when you simply need to return one value if an expression is true 
+            or another of an expression is false. It works very much like 
+            the if formula in excel. It is called ternary, because it is 
+            composed of three operands. The syntax begins with the expression to be 
+            evaluated, followed by a ?, followed by the expression to be returned if true, 
+            followed by a :, followed by the expression to be returned if false. 
+            For example, expressionToEvaluate ? valueIfTrue : valueIfFalse
+          </p>
+        <h4>else if</h4>
+          <p>else if can also be used after an if statement if you want 
+            to evaluate another expression after the previous statement 
+            evaluated to false. An if statement can be followed by as many 
+            else if statements as you would like, but when each statement is 
+            comparing against the same expression, a switch statement may be 
+            a better solution. 
+          </p>
+        <h4>switch</h4>
+          <p>The switch statement allows a single expression to be evaluated 
+            in many ways, and depending on its evaluation, one of many statements 
+            can be executed. The syntax begins with the switch keyword, followed by 
+            the expression to be evaluated in paranthesis, and then within curly braces 
+            a series of case statements, with each case statement beginning with the 
+            case keyword, followed by a value that the expression may evaluate to, 
+            followed by a :, and then the code to be executed. 
+            Note, it is also common to utilize a break statement, unless it is intended 
+            that multiple case statements may be executed for a single expression. 
+          </p>
+
+        <p class="codepen" data-height="365" data-theme-id="light" data-default-tab="js,result" data-user="onejay" data-slug-hash="QWbOrvj" style="height: 365px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="conditionals">
+          <span>See the Pen <a href="https://codepen.io/onejay/pen/QWbOrvj">
+          conditionals</a> by onejay (<a href="https://codepen.io/onejay">@onejay</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+      </div>
+
+      <div>
+        <h3>Functions & Parameters</h3>
+        <p>
+          functions in javascript are a useful way to reuse code and make your code more dynamic. 
+          Reuseable in the sense that a block of code can be called from many different 
+          places in the program, rather than having to rewrite the same functionality multiple times, 
+          and dynamic in that they can take parameters, or different inputs, each time they are 
+          called, to produce different results. 
+        </p>
+        <p>
+          functions can be declared normally, using the function keyword, followed by the name of the function, 
+          followed by a set of (parenthesis), followed by the statements {within curly braces}. 
+          Inside the () may be one or more parameters, which are values passed into the function 
+          for use with the function statements. The value received through the parameter is called the 
+          argument(s). 
+        </p>
+        <p>With ES6, there is also a new way of declaring simple functions called 
+          arrow functions, as is descriptive of their simplified syntax. Arrow functions do 
+          not have a name (per se), but can be assigned to a variable name for easy access. 
+          Their syntax is made up of the (parenthesis), which may include one or more parameters, 
+          followed by the arrow =>, followed by the expression to be returned. The return keyword 
+          is not needed, and neither are the {curly braces}. This syntax makes it very simple to 
+          define simple functions, but this method does also have some drawbacks to consider. 
+          With arrow functions, you can only execute one statement, and they also have 
+          a different way of handling the this keyword. With regular functions, this refers to 
+          the object that called the function, but with arrow functions, this refers to the object that 
+          owns the function, or the object in which the arrow function is declared. 
+        </p>
+
+      </div>
+      <div>
+        <h3>Variables</h3>
+        <p>
+          variables provide a way to store data in memory for a program, 
+            and there are many ways to store data with javascript. 
+            Javascript is an untyped language, which means that when a 
+            variable is declared, it can be of any type of data, without 
+            defining the data type, and further, that the type of data 
+            assigned to a variable can change throughout the course of the program 
+            (with a few exceptions). </p>
+          <p> The first step, before a value can be stored 
+            to a variable is to declare the variable, but defining a name for the variable. 
+            Variable names can be named anything, and javascript is case sensitive, 
+            but they must start with a letter (or _ or $), and may only contain 
+            letters, numbers (and _ or $). Once the variable name is declared, 
+            then the variable can be initialized, by using the = (assignment operator) 
+            to set its value. </p>
+          <p> The value assigned to a variable can be 
+            a primitive value, like a boolean (true/false) value, a number, a string 
+            (strings must be set within quotes (single or double quotes)), 
+            an object (objects must be assigned using {curly braces}), an array 
+            (arrays must be assigned using [square braces]), a function, or null. If a variable 
+            is declared but not initialized, its value is undefined. 
+        </p>
+        <p>
+          Variables can be declared in a number of ways, and 
+          depending on where it is declared and the keyword used to 
+          declare it makes a big difference in its availability and 
+          where it can be used, i.e. scope. 
+        </p>
+        <h4>global scope</h4>
+        <p>variables declared outside of any function are assigned with global scope, meaning 
+          they can be accessed from anywhere within the program. 
+        </p>
+        <h4>var</h4>
+        <p>declaring a variable with the keyword var gives it gives it function 
+          scope, if it is declared within a function, or global scope if it is 
+          declared outside of any function. If it is declared within a function
+          (even within a nested block scope, i.e. for{}, if{}, etc.), 
+          it can be used anywhere within that function, and any nested functions 
+          or block scopes, but not outside of the function in which it was declared. 
+        </p>
+        <h4>let</h4>
+        <p>let is a new keyword with ES6 (ECMAScript (Javascript) 2015), 
+          and it allows for block scope specifically, meaning that a variable 
+          declared with let is unique to the {block scope} it is declared within 
+          and cannot be used anywhere else in the function or program. 
+        </p>
+        <h4>const</h4>
+        <p>const is another new keyword with ES6, and while it shares 
+          the same scope rules as let, it does so in a way so that its value cannot 
+          be overwritten with another assignment (though there are some exceptions to 
+          this, such as that individual elements of const arrays, or individual properties 
+          of const objects can be updated).
+        </p>
+      </div>
+      
+      <div>
+        <h3>Arrays & Associative Arrays</h3>
+        <p>
+
+        </p>
+
+      </div>
+      
+    </div>
+
+    <div class="topicGroup">
+      <h2>Javascript Objects</h2>
+      <div>
+        <h3>Object Creation Functions</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Inheritance</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Properties</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Methods</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Inheritance</h3>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+
+    <div class="topicGroup">
+      <h2>JSON</h2>
+      <div>
+        <h3>Parse</h3>
+        
+
+  <h3>Input a json file name to view a list of student data </h3>
+<div>
+  <input id="fileName" list="files" onchange="onChange()">
+  <datalist id="files">
+    <option value="json.txt">
+    <option value="json1.txt">
+  </datalist>
+  <button onclick="getStudents()">Get Student Info</button>
+  <span id="help">Enter json.txt or json1.txt</span>
+</div>
+  <table>
+    <tr>
+      <th>
+        First Name
+      </th>
+      <th>
+        Last Name
+      </th>
+      <th>
+        Address
+      </th>
+      <th>
+        Major
+      </th>
+      <th>
+        GPA
+      </th>
+    </tr>
+    <tbody id="tbody"></tbody>
+  </table>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Stringify</h3>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+
+    <div class="topicGroup">
+      <h2>AJAX</h2>
+      <div>
+        <h3>XMLHTTPRequest</h3>
+        <h3>Select a country to see its top 10 cities by population</h3>
+  <select id="countries" name="countries"
+    onchange="getCities(this)">
+    <option value="">Select a country</option>
+    <option value="usa">USA</option>
+    <option value="canada">Canada</option>
+    <option value="mexico">Mexico</option>
+    <option value="russia">Russia</option>
+  </select>
+
+  <div id="cities"></div>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+
+    <div class="topicGroup">
+      <h2>Local Storage</h2>
+      <div>
+        <h3>Loops</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Conditionals</h3>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+
+    <div class="topicGroup">
+      <h2>DOM</h2>
+      <div>
+        <h3>Loops</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Conditionals</h3>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+
+    <div class="topicGroup">
+      <h2>Javascript Events</h2>
+      <div>
+        <h3>Loops</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Conditionals</h3>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+    
+    <div class="topicGroup">
+      <h2>CSS3 using Javascript</h2>
+      <div>
+        <h3>Loops</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Conditionals</h3>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+
+    <div class="topicGroup">
+      <h2>Triggering CSS3 with Javascript</h2>
+      <div>
+        <h3>Loops</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Conditionals</h3>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+
+
+    <div class="topicGroup">
+      <h2>CSS3 Transitions</h2>
+      <div>
+        <h3>Loops</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Conditionals</h3>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+
+    <div class="topicGroup">
+      <h2>CSS3 Transforms</h2>
+      <div>
+        <h3>Loops</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Conditionals</h3>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+
+    <div class="topicGroup">
+      <h2>CSS Animations</h2>
+      <div>
+        <h3>Loops</h3>
+        <p>
+
+        </p>
+
+      </div>
+      <div>
+        <h3>Conditionals</h3>
+        <p>
+
+        </p>
+
+      </div>
+    </div>
+    
+    <div class="topicGroup">
+      <h2>HTML Tags</h2>
+      <div>
+        <h3>Video</h3>
+        <p>
+
+        </p>
+
+      </div>
+
+      <div>
+        <h3>Audio</h3>
+        <p>
+
+        </p>
+
+      </div>
+
+      <div class="topic" id="canvas">
+        <h3>Canvas tag</h3>
+        <p>The canvas tag provides a special container that can be used by javascript for drawing images on the page via the canvas api. To use the tag, include height and width attributes, give it an id (so that your script knows which element to draw on), and end with a closing tag. In between the opening and closing tags should be any fallback content, in case the browser fails to load the content intended for the element. The content drawn in the container is defined by the functions declared in the javascript. </p>
+        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="onejay" data-slug-hash="gOpXREB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="gOpXREB">
+          <span>See the Pen <a href="https://codepen.io/onejay/pen/gOpXREB">
+          gOpXREB</a> by onejay (<a href="https://codepen.io/onejay">@onejay</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+      </div>
+    </div>
+
+
+    <script src="cit261.js"></script>
+  </body>
 </html>
