@@ -276,72 +276,81 @@
 
     <div class="topicGroup">
       <h2>JSON</h2>
+      <p>JSON, which stands for JavaScript Object Notation, is 
+        simply a pattern for formatting text strings and files in 
+        a way that similarly matches the syntax used for defining an 
+        object in javascript. 
+      </p>
+      <p>In javascript, as with JSON, an object is declared within {curly braces}. 
+        Objects then have properties, and each property has a value. 
+        The name in each key value pair must be within "double quotes". 
+        Data types that can be assigned to properties in JSON include boolean values (true/false, no quotes),
+        numbers (with or without decimals, no quotes), and strings (surrounded by "quotes"). 
+        Just as javascript can have objects nested within objects, so can JSON. 
+        And just as with javascript, JSON can have arrays of values assigned 
+        to a property, using comma separated values within [square brackets]. 
+
+      </p>
       <div>
         <h3>Parse</h3>
-        
-
-  <h3>Input a json file name to view a list of student data </h3>
-<div>
-  <input id="fileName" list="files" onchange="onChange()">
-  <datalist id="files">
-    <option value="json.txt">
-    <option value="json1.txt">
-  </datalist>
-  <button onclick="getStudents()">Get Student Info</button>
-  <span id="help">Enter json.txt or json1.txt</span>
-</div>
-  <table>
-    <tr>
-      <th>
-        First Name
-      </th>
-      <th>
-        Last Name
-      </th>
-      <th>
-        Address
-      </th>
-      <th>
-        Major
-      </th>
-      <th>
-        GPA
-      </th>
-    </tr>
-    <tbody id="tbody"></tbody>
-  </table>
-        <p>
-
+        <p>the JSON object in javascript has a method called parse, which 
+          takes a json formatted string (or text file), and assigns the data 
+          to an object (variable) in the javascript program running. 
         </p>
 
       </div>
       <div>
         <h3>Stringify</h3>
         <p>
-
+          The JSON object in javascript also has a method called stringify, 
+          which essentially does the opposite of parse, taking a variable 
+          with an object assigned to it, and then returning a string in json format 
+          that matches the data structure of the object that it received. 
         </p>
 
+      </div>
+      <div>
+        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="onejay" data-slug-hash="oNXorqZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="json">
+          <span>See the Pen <a href="https://codepen.io/onejay/pen/oNXorqZ">
+          json</a> by onejay (<a href="https://codepen.io/onejay">@onejay</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
       </div>
     </div>
 
     <div class="topicGroup">
       <h2>AJAX</h2>
       <div>
-        <h3>XMLHTTPRequest</h3>
-        <h3>Select a country to see its top 10 cities by population</h3>
-  <select id="countries" name="countries"
-    onchange="getCities(this)">
-    <option value="">Select a country</option>
-    <option value="usa">USA</option>
-    <option value="canada">Canada</option>
-    <option value="mexico">Mexico</option>
-    <option value="russia">Russia</option>
-  </select>
-
-  <div id="cities"></div>
-        <p>
-
+        <p>AJAX stands for Asynchronous Javascript And XML, but in practicality 
+          it really just means asynchronous javascript, since XML is quite optional and 
+          rarely used, with JSON being preferred instead. Asynchronous javascript means 
+          that javascript can request data from external sources and web services 
+          and continue on with its operations without waiting for the external source to respond. 
+          When the request is responded to and received, javascript can then react to it, 
+          updating the page without reload. 
         </p>
+        <h3>XMLHTTPRequest</h3>
+        <p>
+          XMLHTTPRequest is a standard object in javascript for requesting 
+          data asynchronously. To use it, create an instance of that object with the new keyword and 
+          store it in a variable. Then use the open() method and pass in the appropriate parameters, 
+          being first, the HTTP verb to use to make the request, such as GET or POST, and 
+          secondly, the resource being requested, which could be a local / relative path, or 
+          an external resource referenced by absolute path or URL. 
+        </p>
+        
+        <h3>Select a country to see its top 10 cities by population</h3>
+        <select id="countries" name="countries"
+          onchange="getCities(this)">
+          <option value="">Select a country</option>
+          <option value="usa">USA</option>
+          <option value="canada">Canada</option>
+          <option value="mexico">Mexico</option>
+          <option value="russia">Russia</option>
+        </select>
+
+        <div id="cities"></div>
 
       </div>
     </div>
