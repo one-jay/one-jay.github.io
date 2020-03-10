@@ -228,9 +228,17 @@
       <div>
         <h3>Arrays & Associative Arrays</h3>
         <p>
-
+          An array is a list of values. Values in arrays can be primitive, or objects. 
+          Arrays are declared by assigning a list of comma separated values within [square brackets] to a variable. 
+          The values of an array do not need to be of the same data type, meaning 
+          you could have an array like this: let myArray = [true, 'or', false, 69, "is my", {favorite: 'number'}]
         </p>
-
+        <p>
+          Associative Arrays are not really a thing in javascript. 
+          An associative array is an array in which elements are referred to by their name. 
+          In javascript, object properties can be referred to by name, but 
+          elements in an array are always referred to by their index number. 
+        </p>
       </div>
       
     </div>
@@ -339,7 +347,7 @@
           secondly, the resource being requested, which could be a local / relative path, or 
           an external resource referenced by absolute path or URL. 
         </p>
-        
+
         <h3>Select a country to see its top 10 cities by population</h3>
         <select id="countries" name="countries"
           onchange="getCities(this)">

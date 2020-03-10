@@ -49,6 +49,11 @@
     }
     console.log(myFirstVar + ' still available after the function? yes')
     console.log(mySecondVar + ' still available after the function? yes, but its value was changed in the function')
-    console.log(myThirdVar ? myThirdVar : 'myThirdVar is ' + myThirdVar + ', it is not available after the function') //no, undefined
+    //console.log(myThirdVar ? myThirdVar : 'myThirdVar is ' + myThirdVar + ', it is not available after the function') //no, undefined
     //console.log(myFourthVar + ' still available after the function?') //no, undefined
 
+    var myArray = [true, 'or', false, 69, "is my", {favorite: 'number'}]
+    myArray.forEach(cl)
+    function cl(v){
+        console.log(v)
+    }
