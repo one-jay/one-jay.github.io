@@ -1,18 +1,6 @@
 
     
-    function getCities(country) {
-      console.log('country selected: ' + country.value);
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("cities").innerHTML = this.responseText;
-        }
-      };
-      var countryFile = country.value + '.txt';
-      console.log(countryFile);
-      xhttp.open("GET", countryFile, true);
-      xhttp.send();
-    }
+
 
     ///////////////////////////////////////////////////////
 
