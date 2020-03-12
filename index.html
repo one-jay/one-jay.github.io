@@ -438,7 +438,7 @@
       
     </div>
 
-    
+
     <div class="topicGroup">
       <h2>Triggering CSS3 with Javascript</h2>
       <div>
@@ -546,16 +546,35 @@
       <div>
         <h3>Video</h3>
         <p>
-
+          With the html5 video tag, you can easily embed video on 
+          a page without the need of any third party plugin, like flash. 
+          Simply use the video tag to set the width and height, and 
+          any default behavior, like displaying controls or autoplay, 
+          and then inside the video tag include a source tag, which defines 
+          the location of the file and the file type. 
         </p>
+
+        <video width="640" height="360" controls>
+          <source src="NightSky.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
 
       </div>
 
       <div>
         <h3>Audio</h3>
         <p>
-
+          The html5 audio tag, very much like the video tag, allows you to 
+          easily embed a music player on your web page (without any third 
+          party plugin, like flash). Simply use the audio tag and include 
+          any default properties, like controls, and then use the source tag 
+          to define the file resource and its type. 
         </p>
+
+        <audio controls>
+          <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
 
       </div>
 
