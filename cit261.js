@@ -1,8 +1,6 @@
 
-    
 
-
-    ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 
     console.log(myFirstVar ? myFirstVar : 'myFirstVar is still ' + myFirstVar)//not in scope yet
     var myFirstVar = 'my first variable. it is global. '
@@ -45,3 +43,8 @@
     function cl(v){
         console.log(v)
     }
+
+
+///////////////////////////////////////////////////////
+
+
