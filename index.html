@@ -245,40 +245,82 @@
 
     <div class="topicGroup">
       <h2>Javascript Objects</h2>
+      <p>
+        Objects are like a special type of variable, that can hold lots of different information about a single thing. 
+        Objects can be created with object literal notation, or through instantiation, with the use of a class. 
+        They can have properties, which are defined in name: value pairs, and they can have 
+        functions, which are also called methods. 
+      </p>
       <div>
-        <h3>Object Creation Functions</h3>
+        <h3>Object Creation Functions and Instantiation</h3>
         <p>
-
+          You can create an object through literal notation, and assign 
+          it to a variable, like this: var myObj = {firstProperty: "my first property", secondProperty: "my second property"};
         </p>
-
+        <p>
+          The other way to create an object is through instantiating a class. 
+          A class is a special type of function for creating instances of objects, 
+          and will always have a constructor method called constructor(). (You can 
+          define a constructor method however you want to, but if you don't, 
+          javascript will create one for you.) 
+        </p>
       </div>
       <div>
         <h3>Inheritance</h3>
         <p>
-
+          Inheritance can be achieved in Javascript through prototypes, and 
+          in ES6, syntactically simpler through the use of classes and the extends keyword. 
+          Inheritance allows a child object to make use of the same 
+          properties and methods of its parent object. This can be very useful for 
+          creating hierarchies and making your code more reuseable and less repeated. 
         </p>
 
       </div>
       <div>
         <h3>Properties</h3>
         <p>
-
+          Properties of an object are each identified by name, 
+          and each instance of an object can have a unique value for that 
+          named property. To access the value of a property of an object, 
+          we can use dot notation, eg. objectName.propertyName, and the 
+          value of that property can be assigned or retrieved. 
         </p>
-
+        <p>
+          Interestingly, properties in classes can currently only be 
+          declared in the constructor method, using the this keyword, though it is currently a 
+          proposed / experimental feature that would allow them to simply 
+          be declared within the class itself, either as public or private 
+          members. 
+        </p>
       </div>
       <div>
         <h3>Methods</h3>
         <p>
-
+          Methods are functions of an object. You can assign the value 
+          of a property to be a function (in which case, the value of 
+          the property is really the value returned by the function). 
+          Or, in the case of classes, you can define member functions, which 
+          are accessed through an instantiation of an object, i.e. myObject.myFunction(), 
+          or even static functions, which are accessed without an instantiated object, 
+          eg. myClass.myStaticFunction()
         </p>
 
       </div>
-      <div>
+      <!-- <div>
         <h3>Instantiation</h3>
         <p>
 
         </p>
 
+      </div> -->
+      <div>
+        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="onejay" data-slug-hash="GRJxVqv" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="objects">
+          <span>See the Pen <a href="https://codepen.io/onejay/pen/GRJxVqv">
+          objects</a> by onejay (<a href="https://codepen.io/onejay">@onejay</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        
       </div>
     </div>
 
