@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <style>
+            
+            body { 
+            font: 1.5em "Fira Sans", sans-serif;
+            background-color: rgb(40,44,52);
+            color: rgb(171,178,191);
+            }
+
+            h1{
+                text-align: center;
+                    color: rgb(223,108,117);
+                    display: block;
+                }
+            h2{
+            color: rgb(147,188,118);
+            }
+            h3{
+            color: rgb(97,175,239);
+            }    
+            a:link{
+            color: rgb(97,175,239);
+        }
+            table {
+            border-collapse: collapse;
+            }
+
+            td, th {
+            border: 1px solid #dddddd;
+            color: #ddd;
+            text-align: left;
+            padding: 8px;
+            }
+            th, tr:nth-child(even) {
+            background-color: #444;
+            }
+            main img{
+                height: 2em;
+                transition: transform 1s;
+                
+            }
+            
+            
+
+            main img:hover{
+                transform: scale(3);
+                animation: none;
+            }
+            main{
+                display: grid;
+                grid-template-columns: 1fr 3fr ;
+                
+                margin: 1em;
+            }
+            main > *{
+                padding: 1em;
+            }
+            aside{
+            }
+            h3{
+                text-align: center;
+                display: inline;
+            }
+            header{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            header img{
+                width: 1em;
+                animation: roll 3s infinite;
+                animation-timing-function: linear;
+                margin: 1em;
+            }
+            @keyframes roll {
+                0% {
+                    transform: rotate(0);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+        </style>
+    </head>
+    <body onload="globalData(), getCrypto(), getFavorite()">
+        <h1>top 50 cryptocurrencies by market cap</h1>
+
+        <header>
+            <img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579">
+            <h3 id="dominance"></h3>
+            <img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579">
+        </header> 
+        <main>
+
+        <aside>
+            <p>Mouse over a crypto's image to enlarge it, and click its name to make it a favorite, 
+                getting additional information about it. 
+            </p>
+            <p>My Favorite: </p>
+            <p id="favDesc"></p>
+
+        </aside>
+
+
+        <table>
+            <tr>
+            <th>
+                Crypto
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Current Price
+            </th>
+            <th>
+                Market Cap
+            </th>
+            <th>
+                Price % Change (24h)
+            </th>
+            </tr>
+            <tbody id="tbody"></tbody>
+        </table>
+    </main>
+
+
+        <script>
+            function getCrypto() {
+                var url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false'
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var parsed = JSON.parse(this.responseText)
+                        var tbody = document.getElementById('tbody');
+
+                        for (var i = 0; i < parsed.length; i++) {
+                            var tr = "<tr>";
+                            tr += '<td><img src="' + parsed[i].image + '"></td>' 
+                                + '<td onclick="setFavorite(this.id)" id="'
+                                + parsed[i].id + '">' + parsed[i].name + "</td>" 
+                                + "<td>$" + parsed[i].current_price + "</td>"
+                                + "<td>$" + parsed[i].market_cap + "</td>"
+                                + "<td>" + parsed[i].price_change_percentage_24h + "</td>";
+                            tr += "</tr>";
+                            tbody.innerHTML += tr;
+                        }
+                    }
+                }
+                xhttp.open("GET", url);
+                xhttp.send();
+            }
+
+            function setFavorite(coinID){
+                //remove existing favorite
+                localStorage.removeItem('myFavorite');
+                //set new favorite
+                localStorage.setItem('myFavorite', coinID);
+                //update getFavorite info
+                getFavorite();
+            }
+             
+            
+            function getFavorite() {
+                var coinID = localStorage.getItem('myFavorite');
+                console.log('favorite crypto retrieved from local storage: ' + coinID)
+                
+                var url = 'https://api.coingecko.com/api/v3/coins/' + 
+                coinID + 
+                '?localization=false&tickers=false&market_data=false';
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var parsed = JSON.parse(this.responseText)
+                        document.getElementById('favDesc').innerHTML = parsed.description.en;
+                    }
+                }
+                xhttp.open("GET", url);
+                xhttp.send();
+            }
+            
+
+            function globalData() {
+                if(sessionStorage.getItem('dominance') == null){
+                    console.log('no dominance value in session storage')
+                    var url = 'https://api.coingecko.com/api/v3/global';
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            var parsed = JSON.parse(this.responseText)
+                            document.getElementById('dominance').innerHTML = 
+                            'BTC Dominance: %' + parsed.data.market_cap_percentage.btc.toFixed(2) ;
+                            sessionStorage.setItem('dominance', parsed.data.market_cap_percentage.btc.toFixed(2));
+                            console.log('dominance value saved to session storage')
+                        }
+                    }
+                    xhttp.open("GET", url);
+                    xhttp.send();
+                }else{
+                    let dominance = sessionStorage.getItem('dominance')
+                    document.getElementById('dominance').innerHTML = 
+                            'BTC Dominance: %' + dominance ;
+                    console.log('dominance value retrieved from session storage')
+                }
+                    
+            }
+
+
+
+        </script>
+    </body>
+</html>
